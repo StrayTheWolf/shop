@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -12,13 +12,18 @@
 <body class="d-flex align-items-center flex-column w-20 p-3 text-center">
 
 <header>
-    <h1><?= $title ?? '' ?></h1>
-    <?=include 'templates/menu.php'?>
+    <div class="position-absolute" style="right: 50px">
+        <?= include 'templates/loginForm.php'; ?>
+    </div>
+
+    <h1><?= $title ?? 'Главная страница' ?></h1>
+    <div>
+        <?= include 'templates/menu.php' ?>
+    </div>
 </header>
 
 <main>
     <div class="container d-flex justify-content-center flex-column" style="height: 80vh">
-        <!-- здесь будет контент (стрианцы) которые собирается в буфер в файле index.php -->
         <?= $content ?? '' ?>
     </div>
 </main>

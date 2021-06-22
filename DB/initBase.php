@@ -2,7 +2,7 @@
 
 //инициализация доступа к базе
 
-function initBase ()
+function initBase (): PDO
 {
     $dbName = 'mysql:dbname=shop;host=127.0.0.1';
     $user = 'root';
